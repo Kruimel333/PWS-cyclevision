@@ -13,38 +13,29 @@ import {
     ACH_LEVELS_DURATION,
     FRIENDS_DATA_FULL,
     TRAINING_PROGRAMS
-} from "./constants";
-import { ScreenName, Ride, Achievements, Goal, CurrentRideState, Coordinate, RideSample, UnitSystem, SensorsState } from "./types";
-import { formatDuration, generateSampleData, clamp } from "./utils";
+} from "./constants.ts";
+import { ScreenName, Ride, Achievements, Goal, CurrentRideState, Coordinate, RideSample, UnitSystem, SensorsState } from "./types.ts";
+import { formatDuration, generateSampleData, clamp } from "./utils.ts";
 
 // --- Branding Components (Based on user images) ---
 
 const CycleVisionLogo = ({ size = 120, theme = "light", showText = true }: { size?: number, theme?: string, showText?: boolean }) => {
     const isDark = theme === "dark";
     const color = isDark ? "#FFFFFF" : "#000000";
-    const accent = PRIMARY;
 
     return (
         <div className="flex flex-col items-center justify-center">
             <svg width={size} height={size * 0.6} viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Sunglasses Frame */}
                 <path d="M10 35C10 30 15 25 30 25H170C185 25 190 30 190 35V45C190 65 175 80 155 80H140C125 80 115 70 110 60C105 50 95 50 90 60C85 70 75 80 60 80H45C25 80 10 65 10 45V35Z" stroke={color} strokeWidth="4" fill="none" />
-                
-                {/* Left Lens Icon: Cyclist */}
                 <g opacity="0.9">
                     <circle cx="45" cy="62" r="8" stroke={color} strokeWidth="2" />
                     <circle cx="75" cy="62" r="8" stroke={color} strokeWidth="2" />
                     <path d="M60 62L55 50L65 42L70 50L60 62Z" fill={color} />
                     <circle cx="68" cy="38" r="3" fill={color} />
                 </g>
-
-                {/* Right Lens Icons: Heart, Bolt, Clock */}
                 <g opacity="0.9">
-                    {/* Heart */}
                     <path d="M135 45C132 42 128 42 125 45C122 48 122 52 125 55L135 65L145 55C148 52 148 48 145 45C142 42 138 42 135 45Z" fill={color} />
-                    {/* Bolt */}
                     <path d="M158 40L150 55H160L152 70" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    {/* Clock */}
                     <circle cx="178" cy="50" r="7" stroke={color} strokeWidth="2" />
                     <path d="M178 50V46M178 50L181 50" stroke={color} strokeWidth="2" strokeLinecap="round" />
                 </g>

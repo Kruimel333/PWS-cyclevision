@@ -19,13 +19,11 @@
             margin: 0;
             padding: 0;
             -webkit-tap-highlight-color: transparent;
-            /* Voorkom dat content onder inkepingen verdwijnt */
             padding-top: var(--sat);
             padding-right: var(--sar);
             padding-bottom: var(--sab);
             padding-left: var(--sal);
         }
-        /* Custom scrollbar for web */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -39,8 +37,6 @@
         .dark ::-webkit-scrollbar-thumb {
             background: #334155;
         }
-        
-        /* Zorg dat de sticky header rekening houdt met de bovenste notch */
         header {
             padding-top: var(--sat);
             height: calc(5rem + var(--sat)) !important;
@@ -49,14 +45,17 @@
 <script type="importmap">
 {
   "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
 </head>
 <body class="bg-white dark:bg-[#07102a] transition-colors duration-200">
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
