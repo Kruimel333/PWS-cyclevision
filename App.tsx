@@ -1017,7 +1017,7 @@ export default function App() {
                         </div>
 
                         <div className="text-center space-y-1">
-                            <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">CycleVision v2.1.0</p>
+                            <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">CycleVision V6.7.0</p>
                             <p className="text-xs font-bold text-blue-600/60 italic">Gebouwd door Niek Amsing en Hidde Kruims</p>
                         </div>
                     </div>
