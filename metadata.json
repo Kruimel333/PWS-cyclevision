@@ -1,0 +1,7 @@
+{
+  "name": "CycleVision",
+  "description": "Een volledige wielren-app voor het bijhouden van ritten, analyses, trofeeën en doelen met een geavanceerde dashboard interface.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
